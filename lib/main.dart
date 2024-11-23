@@ -30,17 +30,24 @@ class MyApp extends StatelessWidget {
                 ),
               ),
               const Text(
-                'Pongsakorn',
+                'Pongsakorn Sae sueng',
                 style: TextStyle(
                     fontFamily: 'Pacifico',
-                    fontSize: 24,
+                    fontSize: 26,
                     fontWeight: FontWeight.bold,
                     color: Colors.white),
+              ),
+              SizedBox(
+                height: 20,
+                width: 200,
+                child: Divider(
+                  color: Colors.blueGrey[200],
+                ), //Line under name
               ),
               const Text("Login", //Login Text
                   style: TextStyle(
                       fontFamily: 'Pacifico',
-                      fontSize: 20,
+                      fontSize: 24,
                       fontWeight: FontWeight.bold)),
               const SizedBox(height: 10),
               const Text("Username",
@@ -89,37 +96,31 @@ class MyApp extends StatelessWidget {
               ),
               const SizedBox(height: 10), //Button pass Login
               const SizedBox(
-                height: 150,
+                height: 60,
               ),
               // ignore: avoid_unnecessary_containers
-              Container(
-                child: const Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Icon(
-                      Icons.phone,
-                      size: 40,
-                      color: Colors.white,
-                    ),
-                    Text("Tel : 097-551-2112", style: TextStyle(fontSize: 15)),
-                  ],
+              const Card(
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    size: 40,
+                    color: Colors.white,
+                  ),
+                  title: Text("Tel : 097-551-2112",
+                      style: TextStyle(fontSize: 15)),
                 ),
               ),
-              Container(
-                padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
-                child: const Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Icon(
-                      Icons.email,
-                      size: 40,
-                      color: Colors.white,
-                    ),
-                    Text("email : pongsakorn@gmail.com",
-                        style: TextStyle(fontSize: 15)),
-                  ],
+
+              const Card(
+                  child: ListTile(
+                leading: Icon(
+                  Icons.email,
+                  size: 40,
+                  color: Colors.white,
                 ),
-              ),
+                title: Text("email : pongsakorn@gmail.com",
+                    style: TextStyle(fontSize: 15)),
+              )),
             ],
           )),
         ),
